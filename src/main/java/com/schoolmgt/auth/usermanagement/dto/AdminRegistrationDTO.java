@@ -1,0 +1,15 @@
+package com.schoolmgt.auth.usermanagement.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class AdminRegistrationDTO {
+    private String email;
+    private String password;
+    private String phoneNumber;
+    private String schoolId;
+}
