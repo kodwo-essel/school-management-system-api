@@ -1,4 +1,6 @@
-package com.schoolmgt.auth.grades.entity;
+package com.schoolmgt.auth.attendance.entity;
+
+import java.time.LocalDate;
 
 import com.schoolmgt.auth.base.entity.BaseEntity;
 
@@ -15,31 +17,23 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(
-    name = "grades",
-    uniqueConstraints = @UniqueConstraint(columnNames = {"studentId", "classSubjectId"})
-)
+@Table(name = "teachers_attendances",
+       uniqueConstraints = @UniqueConstraint(columnNames = {"teacherId", "date"}))
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Grade extends BaseEntity {
+public class TeacherAttendance extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String studentId; 
-    private String classSubjectId;
+    private LocalDate date;
 
-    private Double sbaScore;
-    private Double examScore;
+    private boolean isPresent;
 
-    private Double sbaPercentage;
-    private Double examPercentage;
-
-    private Double totalScore;
-
-    private String gradeLetter;
+    private String teacherId;
 }
+

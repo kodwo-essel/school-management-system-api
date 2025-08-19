@@ -17,14 +17,14 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "attendances",
+@Table(name = "students_attendances",
        uniqueConstraints = @UniqueConstraint(columnNames = {"studentId", "date"}))
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Attendance extends BaseEntity {
+public class StudentAttendance extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,5 +34,7 @@ public class Attendance extends BaseEntity {
     private LocalDate date;
 
     private boolean isPresent;
+
+    private String teacherId; // teacher who marked the attendance
 }
 

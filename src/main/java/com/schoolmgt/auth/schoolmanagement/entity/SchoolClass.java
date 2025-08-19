@@ -18,9 +18,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "classes")
+@Table(name = "classes", uniqueConstraints = @UniqueConstraint(columnNames = {"academicYear", "name"}))
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -41,6 +42,9 @@ public class SchoolClass extends BaseEntity{
 
     @Column(nullable = false)
     private String schoolId;
+
+    @Column(nullable = false)
+    private String academicYear;
 
     @Column(updatable = false)
     private LocalDateTime createdAt;

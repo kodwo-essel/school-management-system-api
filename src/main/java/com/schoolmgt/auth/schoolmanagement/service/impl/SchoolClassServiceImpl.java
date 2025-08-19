@@ -30,6 +30,7 @@ public class SchoolClassServiceImpl extends BaseServiceImpl<SchoolClass, SchoolC
 
         schoolClass.setName(schoolClassRequestDTO.getName());
         schoolClass.setSchoolId(schoolClassRequestDTO.getSchoolId());
+        schoolClass.setAcademicYear(schoolClassRequestDTO.getAcademicYear());
         
         SchoolClass savedSchoolClass = schoolClassRepository.save(schoolClass);
 
@@ -47,6 +48,7 @@ public class SchoolClassServiceImpl extends BaseServiceImpl<SchoolClass, SchoolC
         schoolClassResponseDTO.setName(savedSchoolClass.getName());
         schoolClassResponseDTO.setSchoolId(savedSchoolClass.getSchoolId());
         schoolClassResponseDTO.setClassId(savedSchoolClass.getClassId());
+        schoolClassResponseDTO.setAcademicYear(savedSchoolClass.getAcademicYear());
         schoolClassResponseDTO.setCreatedAt(savedSchoolClass.getCreatedAt());
         schoolClassResponseDTO.setUpdatedAt(savedSchoolClass.getUpdatedAt());
         return schoolClassResponseDTO;

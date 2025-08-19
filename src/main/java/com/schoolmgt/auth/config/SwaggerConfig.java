@@ -19,7 +19,7 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("CrownThem Voting Platform API")
+                        .title("Krakye School Management System API")
                         .description("""
                                 A comprehensive REST API for managing users for a school management system application.
                                 

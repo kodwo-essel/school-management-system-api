@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Table(
     name = "class_subjects",
     uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"classId", "subjectId"})
+        @UniqueConstraint(columnNames = {"classId", "subjectId", "semester"})
     }
 )
 @Data
@@ -35,4 +35,5 @@ public class ClassSubject extends BaseEntity{
     private String classId;
     private String subjectId;
     private String teacherId;
+    private Semester semester;
 }

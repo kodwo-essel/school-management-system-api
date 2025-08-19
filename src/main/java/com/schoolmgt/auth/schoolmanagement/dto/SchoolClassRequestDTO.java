@@ -13,4 +13,5 @@ import lombok.NoArgsConstructor;
 public class SchoolClassRequestDTO {
     private String name;
     private String schoolId;
+    private String academicYear;
 }

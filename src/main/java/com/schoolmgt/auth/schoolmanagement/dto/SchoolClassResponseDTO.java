@@ -16,6 +16,7 @@ public class SchoolClassResponseDTO {
     private String classId;
     private String name;
     private String schoolId;
+    private String academicYear;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
