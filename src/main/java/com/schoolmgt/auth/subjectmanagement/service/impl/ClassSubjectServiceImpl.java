@@ -27,7 +27,7 @@ public class ClassSubjectServiceImpl extends BaseServiceImpl<ClassSubject, Class
         ClassSubject classSubject = new ClassSubject();
         classSubject.setClassId(classSubjectRequestDTO.getClassId());
         classSubject.setSubjectId(classSubjectRequestDTO.getSubjectId());
-        classSubject.setSemester(classSubjectRequestDTO.getSemester());
+        classSubject.setSemesterId(classSubjectRequestDTO.getSemesterId());
         classSubject = classSubjectRepository.save(classSubject);
 
         return convertToResponseDTO(classSubject);
@@ -52,7 +52,7 @@ public class ClassSubjectServiceImpl extends BaseServiceImpl<ClassSubject, Class
         responseDTO.setClassId(classSubject.getClassId());
         responseDTO.setSubjectId(classSubject.getSubjectId());
         responseDTO.setTeacherId(classSubject.getTeacherId());
-        responseDTO.setSemester(classSubject.getSemester());
+        responseDTO.setSemesterId(classSubject.getSemesterId());
         
         return responseDTO;
     }

@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import com.schoolmgt.auth.base.repository.BaseRepository;
+import com.schoolmgt.auth.semester.entity.Semester;
 import com.schoolmgt.auth.subjectmanagement.entity.ClassSubject;
-import com.schoolmgt.auth.subjectmanagement.entity.Semester;
 
 public interface ClassSubjectRepository extends BaseRepository<ClassSubject>{
     List<ClassSubject> findByClassId(String classId);

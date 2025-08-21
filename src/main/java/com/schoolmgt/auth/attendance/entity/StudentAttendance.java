@@ -3,6 +3,7 @@ package com.schoolmgt.auth.attendance.entity;
 import java.time.LocalDate;
 
 import com.schoolmgt.auth.base.entity.BaseEntity;
+import com.schoolmgt.auth.semester.entity.Semester;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,6 +36,8 @@ public class StudentAttendance extends BaseEntity {
 
     private boolean isPresent;
 
-    private String teacherId; // teacher who marked the attendance
+    private String teacherId;
+
+    private Semester semester;
 }
 

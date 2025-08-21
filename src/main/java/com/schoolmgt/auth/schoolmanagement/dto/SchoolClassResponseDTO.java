@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class SchoolClassResponseDTO {
     private String classId;
     private String name;
-    private String schoolId;
+    private String departmentId;
     private String academicYear;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

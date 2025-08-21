@@ -41,7 +41,7 @@ public class SchoolClass extends BaseEntity{
     private String name;
 
     @Column(nullable = false)
-    private String schoolId;
+    private String departmentId;
 
     @Column(nullable = false)
     private String academicYear;

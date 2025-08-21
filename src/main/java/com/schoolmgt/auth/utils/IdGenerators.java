@@ -10,6 +10,18 @@ public class IdGenerators {
         return String.format("SCH-%04d", id);
     }
 
+    // Department ID: DEP-0001-0001  (department seq - school seq, stripped)
+    public static String generateDepartmentId(Long departmentId, String schoolId) {
+        String schoolSeq = stripPrefix(schoolId, "SCH-");
+        return String.format("DEP-%04d-%s", departmentId, schoolSeq);
+    }
+
+    // Semester ID: SEM-0001-0001  (semester seq - school seq, stripped)
+    public static String generateSemesterId(Long semesterId, String schoolId) {
+        String schoolSeq = stripPrefix(schoolId, "SCH-");
+        return String.format("SEM-%04d-%s", semesterId, schoolSeq);
+    }
+
     // Class ID: CLS-0001-0001  (class seq - school seq, stripped)
     public static String generateClassId(Long classId, String schoolId) {
         String schoolSeq = stripPrefix(schoolId, "SCH-");

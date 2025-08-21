@@ -35,5 +35,5 @@ public class ClassSubject extends BaseEntity{
     private String classId;
     private String subjectId;
     private String teacherId;
-    private Semester semester;
+    private String semesterId;
 }

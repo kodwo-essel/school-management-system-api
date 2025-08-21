@@ -29,13 +29,13 @@ public class SchoolClassServiceImpl extends BaseServiceImpl<SchoolClass, SchoolC
         SchoolClass schoolClass = new SchoolClass();
 
         schoolClass.setName(schoolClassRequestDTO.getName());
-        schoolClass.setSchoolId(schoolClassRequestDTO.getSchoolId());
+        schoolClass.setDepartmentId(schoolClassRequestDTO.getDepartmentId());
         schoolClass.setAcademicYear(schoolClassRequestDTO.getAcademicYear());
         
         SchoolClass savedSchoolClass = schoolClassRepository.save(schoolClass);
 
         if (savedSchoolClass.getClassId() == null) {
-            String classId = IdGenerators.generateClassId(schoolClass.getId(), schoolClassRequestDTO.getSchoolId());
+            String classId = IdGenerators.generateClassId(schoolClass.getId(), schoolClassRequestDTO.getDepartmentId());
             savedSchoolClass.setClassId(classId);
             schoolClassRepository.save(savedSchoolClass);
         }
@@ -46,7 +46,7 @@ public class SchoolClassServiceImpl extends BaseServiceImpl<SchoolClass, SchoolC
     private SchoolClassResponseDTO convertToResponseDTO(SchoolClass savedSchoolClass) {
         SchoolClassResponseDTO schoolClassResponseDTO = new SchoolClassResponseDTO();
         schoolClassResponseDTO.setName(savedSchoolClass.getName());
-        schoolClassResponseDTO.setSchoolId(savedSchoolClass.getSchoolId());
+        schoolClassResponseDTO.setDepartmentId(savedSchoolClass.getDepartmentId());
         schoolClassResponseDTO.setClassId(savedSchoolClass.getClassId());
         schoolClassResponseDTO.setAcademicYear(savedSchoolClass.getAcademicYear());
         schoolClassResponseDTO.setCreatedAt(savedSchoolClass.getCreatedAt());

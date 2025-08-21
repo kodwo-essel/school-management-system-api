@@ -10,8 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SchoolClassRequestDTO {
-    private String name;
+public class AcademicDepartmentRequestDTO {
     private String departmentId;
-    private String academicYear;
+    private String name;
+    private String schoolId;
+    private String description;
 }
