@@ -3,7 +3,6 @@ package com.schoolmgt.auth.attendance.entity;
 import java.time.LocalDate;
 
 import com.schoolmgt.auth.base.entity.BaseEntity;
-import com.schoolmgt.auth.semester.entity.Semester;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,6 +36,10 @@ public class TeacherAttendance extends BaseEntity {
 
     private String teacherId;
 
-    private Semester semester;
+    private String semesterId;
+
+    private String remarks; // Optional remarks like "Sick Leave", "Personal Leave", etc.
+
+    private String attendanceType; // "REGULAR", "LATE", "EARLY_DEPARTURE", "HALF_DAY"
 }
 

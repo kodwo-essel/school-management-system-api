@@ -13,10 +13,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class SchoolClassResponseDTO {
-    private String classId;
-    private String name;
+    private String classId; // "CLS-0001-0001"
+    private String name; // "P1A", "P2B", "JHS1A", "JHS2B"
+    private String schoolId;
     private String departmentId;
-    private String academicYear;
+    private String departmentName; // Populated from department service
+    private String academicYear; // "2024-2025"
+    private String classTeacherId;
+    private String classTeacherName; // Populated from teacher service
+    private Integer capacity; // Maximum number of students
+    private Integer currentStudents; // Current number of enrolled students
+    private Double utilizationRate; // (currentStudents / capacity) * 100
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

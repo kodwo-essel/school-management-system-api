@@ -30,7 +30,7 @@ public class Grade extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String studentId; 
+    private String studentId;
     private String classSubjectId;
 
     private Double sbaScore;
@@ -42,4 +42,14 @@ public class Grade extends BaseEntity {
     private Double totalScore;
 
     private String gradeLetter;
+
+    private String semesterId; // Reference to semester
+
+    private String academicYear; // e.g., "2024-2025"
+
+    private String term; // e.g., "FIRST_TERM", "SECOND_TERM"
+
+    private String teacherId; // Teacher who recorded the grade
+
+    private String remarks; // Optional teacher remarks
 }

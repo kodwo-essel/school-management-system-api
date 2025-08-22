@@ -20,7 +20,7 @@ public class StudentRegistrationDTO {
     private String nationality;
     private ParentDTO parent;
     private String studentId;
-    private String classId;
+    private String schooldId;
     private String email;
     private String password;
     

@@ -1,10 +1,17 @@
 package com.schoolmgt.auth.grades.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class GradeResponseDTO {
 
+    private Long id;
     private String studentId;
     private String classSubjectId;
 
@@ -16,5 +23,11 @@ public class GradeResponseDTO {
 
     private Double totalScore;
     private String gradeLetter;
+
+    private String semesterId;
+    private String academicYear;
+    private String term;
+    private String teacherId;
+    private String remarks;
 }
 

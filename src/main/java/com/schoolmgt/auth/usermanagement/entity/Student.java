@@ -18,7 +18,7 @@ public class Student extends User{
     private String nationality;
     private Long parentId;
     private String studentId;
-    private String classId;
+    private String schoolId;
 
     
 }

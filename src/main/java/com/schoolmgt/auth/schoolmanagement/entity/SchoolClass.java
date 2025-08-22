@@ -38,13 +38,22 @@ public class SchoolClass extends BaseEntity{
     private String classId;
 
     @Column(nullable = false)
-    private String name;
+    private String name; // "P1A", "P2B", "JHS1A", "JHS2B"
 
     @Column(nullable = false)
-    private String departmentId;
+    private String schoolId; // Which school this class belongs to
 
     @Column(nullable = false)
-    private String academicYear;
+    private String departmentId; // Which department (Pre-school, Primary, JHS)
+
+    @Column(nullable = false)
+    private String academicYear; // "2024-2025"
+
+    private String classTeacherId; // Teacher responsible for this class
+
+    private Integer capacity; // Maximum number of students
+
+    private Integer currentStudents; // Current number of enrolled students
 
     @Column(updatable = false)
     private LocalDateTime createdAt;

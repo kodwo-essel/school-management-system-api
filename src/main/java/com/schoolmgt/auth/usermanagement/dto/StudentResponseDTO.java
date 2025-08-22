@@ -20,5 +20,5 @@ public class StudentResponseDTO {
     private String nationality;
     private ParentDTO parent;
     private String studentId;
-    private String classId;
+    private String schoolId;
 }

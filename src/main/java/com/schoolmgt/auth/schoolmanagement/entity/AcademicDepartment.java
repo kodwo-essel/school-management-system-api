@@ -20,11 +20,13 @@ public class AcademicDepartment extends BaseEntity {
     private String departmentId;
 
     @Column(nullable = false)
-    private String name;
+    private String name; // "Pre-school", "Lower Primary", "Upper Primary", "JHS"
 
     @Column(nullable = false)
     private String schoolId;
 
     private String description;
+
+    private String headOfDepartment; // Teacher ID who heads the department
 
 }

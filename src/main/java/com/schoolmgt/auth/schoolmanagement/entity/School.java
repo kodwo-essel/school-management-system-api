@@ -44,6 +44,13 @@ public class School extends BaseEntity{
     private String region;
     private String country;
 
+    private String contactEmail;
+    private String contactPhone;
+    private String website;
+
+    private String motto;
+    private String logoUrl; // URL to school logo
+
     @Column(updatable = false)
     private LocalDateTime createdAt;
 

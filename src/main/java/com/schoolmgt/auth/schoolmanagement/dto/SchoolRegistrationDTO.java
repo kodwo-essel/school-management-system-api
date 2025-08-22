@@ -1,8 +1,12 @@
 package com.schoolmgt.auth.schoolmanagement.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class SchoolRegistrationDTO {
 
     @NotBlank(message = "School name is required")
@@ -22,4 +27,14 @@ public class SchoolRegistrationDTO {
     private String city;
     private String region;
     private String country;
+
+    @Email(message = "Invalid email format")
+    private String contactEmail;
+
+    @Pattern(regexp = "^[+]?[0-9]{10,15}$", message = "Invalid phone number format")
+    private String contactPhone;
+
+    private String website;
+    private String motto;
+    private String logoUrl;
 }

@@ -30,8 +30,12 @@ public class Subject extends BaseEntity{
     private String subjectId;
 
     @Column(nullable = false)
-    private String name;
+    private String name; // "Mathematics", "English", "Science", "Social Studies"
 
     @Column(nullable = false)
     private String schoolId;
+
+    private String departmentId; // Which department this subject belongs to
+
+    private String description; // Simple subject description
 }

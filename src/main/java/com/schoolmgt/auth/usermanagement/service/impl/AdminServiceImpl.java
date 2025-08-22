@@ -87,7 +87,7 @@ public class AdminServiceImpl extends BaseServiceImpl<Admin, AdminRepository> im
         student.setRole(Role.STUDENT);
         student.setDateOfBirth(studentRegistrationDTO.getDateOfBirth());
         student.setGender(studentRegistrationDTO.getGender());
-        student.setClassId(studentRegistrationDTO.getClassId());
+        student.setSchoolId(studentRegistrationDTO.getSchooldId());
         student.setStudentId(studentRegistrationDTO.getStudentId());
         student.setParentId(savedParent.getId());
         student.setNationality(studentRegistrationDTO.getNationality());
@@ -95,7 +95,7 @@ public class AdminServiceImpl extends BaseServiceImpl<Admin, AdminRepository> im
         Student savedStudent = studentRepository.save(student);
 
         if (savedStudent.getStudentId() == null){
-            String studentId = IdGenerators.generateStudentId(savedStudent.getId(), savedStudent.getClassId());
+            String studentId = IdGenerators.generateStudentId(savedStudent.getId(), savedStudent.getSchoolId());
             savedStudent.setStudentId(studentId);
             savedStudent = studentRepository.save(savedStudent);
         }
@@ -129,7 +129,7 @@ public class AdminServiceImpl extends BaseServiceImpl<Admin, AdminRepository> im
         studentResponseDTO.setDateOfBirth(student.getDateOfBirth());
         studentResponseDTO.setNationality(student.getNationality());
         studentResponseDTO.setGender(student.getGender());
-        studentResponseDTO.setClassId(student.getClassId());
+        studentResponseDTO.setSchoolId(student.getSchoolId());
         studentResponseDTO.setStudentId(student.getStudentId());
         studentResponseDTO.setNationality(student.getNationality());
 

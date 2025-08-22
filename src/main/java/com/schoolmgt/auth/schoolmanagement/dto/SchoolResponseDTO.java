@@ -3,6 +3,7 @@ package com.schoolmgt.auth.schoolmanagement.dto;
 import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class SchoolResponseDTO {
 
     private String schoolId;
@@ -20,7 +22,11 @@ public class SchoolResponseDTO {
     private String city;
     private String region;
     private String country;
-
+    private String contactEmail;
+    private String contactPhone;
+    private String website;
+    private String motto;
+    private String logoUrl;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
